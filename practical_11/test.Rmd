@@ -1,0 +1,71 @@
+---
+title: "Practical 11B - Examples"
+author: "sakith thewmika"
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Histogram Representation in R-Studio
+
+A histogram is a graphical representation that organizes a group of data points into specified
+ranges (bins). It helps to visualize the distribution of a dataset. Below is a guide to creating
+histograms in RStudio with examples and corresponding code.
+
+Example 1: Basic Histogram
+```{r}
+# Sample Data
+weights <- c(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+# Creating Histogram
+hist(weights, main = "Weight Distribution", xlab = "Weight (Kg)", col = "blue")
+
+```
+
+Example 2: Customized Histogram
+```{r}
+# Sample Data
+weights <- c(5, 12, 19, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80)
+# Creating Histogram with Custom Bins
+hist(weights, breaks = 7, main = "Customized Histogram", xlab = "Weight (Kg)", col =
+"green", border = "black")
+```
+
+Example 3: Histogram with Axis and Color Customization
+```{r}
+# Sample Data
+weights <- c(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+# Creating Histogram
+hist(weights, main = "Weight Distribution", xlab = "Weight (Kg)", col = "blue")
+```
+```{r}
+# Sample Data
+weights <- c(5, 12, 19, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80)
+# Creating Histogram with Custom Bins
+hist(weights, breaks = 7, main = "Customized Histogram", xlab = "Weight (Kg)", 
+     col ="green", border = "black")
+```
+
+Example 4: Histogram with Specific Bar Width
+```{r}
+# Sample Data
+weights <- c(8, 15, 22, 29, 35, 41, 47, 53, 59, 65, 71, 77, 83, 89, 95)
+# Creating Histogram with Axis Customization
+hist(weights, breaks = seq(0, 100, by = 10),
+     main = "Weight Distribution",
+     xlab = "Weight (Kg)",
+     col = "red",
+     xlim = c(0, 100),
+     ylim = c(0, 5),
+     border = "black")
+```
+```{r}
+# Sample Data
+weights <- c(9, 14, 21, 26, 32, 37, 42, 48, 53, 58, 63, 69, 74, 79, 85)
+# Creating Histogram with Defined Bar Width
+hist(weights, breaks = seq(0, 90, by = 10),
+main = "Histogram with Defined Bar Width",
+xlab = "Weight (Kg)",
+col = "purple",
+border = "black")
+```
